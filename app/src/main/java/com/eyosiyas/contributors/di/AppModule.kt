@@ -14,10 +14,12 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
+/* A module that provides the retrofit instance using dependency injection */
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
+    /* Providing the retrofit instance. */
     @Provides
     @Singleton
     fun provideRetrofitInstance(): GithubApi =
